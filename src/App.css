@@ -1,38 +1,230 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.app {
+  background-image: url('https://source.unsplash.com/random/?landscape');
+
+  /* width: 100%; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app.warm {
+  background-image: url('https://source.unsplash.com/random/?sunny');
+}
+
+.app.cold {
+  background-image: url('https://source.unsplash.com/random/?foggy');
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(45, 15, 15, 0.2), rgba(0, 0, 0, 0.5));
+}
+
+
+
+.search {
+  background-color: rgba(255, 255, 255, 0.316);
+  width: 60%;
+  height: 45px;
+  margin: 0 19%;
+  border-radius: 0 0 16px 16px;
+  opacity: 0.85;
+  border: 0px;
+  font-size: 15px;
+  padding-left: 1rem;
+  transition: 0.4s ease-out;
+  box-shadow: 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search:focus {
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 0 16px 0 16px;
+  box-shadow: 8px 8px rgba(0, 0, 0, 0.19);
+}
+
+.bg1 {
+  background-color: rgba(193, 178, 178, 0.645);
+  width: 39rem;
+  height: 30rem;
+  margin: 5rem auto;
+  padding: 15px;
+  border-radius: 26px 0 26px 0;
+}
+
+.location_date {
+  /* margin-top: 12rem; */
+  display: flex;
+  justify-content: space-between;
+  /*width: 60vw; */
+}
+
+.location_date .location {
+  font-size: 20px;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.59);
+}
+
+.location_date .date {
+  font-size: 13px;
+  text-shadow: 3px 3px rgba(50, 50, 50, 0.29);
+}
+
+.info {
+  margin: 2rem auto;
+  /* background-color: aliceblue; */
+  width: 50%;
+
+  /* justify-content: center; */
+}
+
+.feels {
+  /* margin: 100px; */
+  text-align: center;
+  font-size: 15px;
+}
+
+
+.weather-box .temperature {
+  font-size: 90px;
+  padding: 5px;
+  margin: 2rem 0rem 1rem 6rem;
+
+}
+
+.weather-box .temperature sup {
+  font-size: 55px;
+}
+
+.weather-box .temperature small {
+  font-size: 50px;
+}
+
+.weather-box .weather {
+  font-size: 40px;
+  /* justify-content: center; */
+  /* margin-left: 100px; */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+hr {
+  margin-top: 50px;
+  /* background-color: black; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hum_wind {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 1rem;
+  justify-content: space-evenly;
+
 }
 
-.App-link {
-  color: #61dafb;
+.humidity {
+  display: flex;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.humidity .ic {
+  font-size: 20px;
+}
+
+.humidity small {
+  font-size: 20px;
+  margin-left: 1px;
+}
+
+.wind small {
+  font-size: 20px;
+}
+
+.wind {
+  display: flex;
+
+}
+
+.wind .ic {
+  font-size: 20px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  /* Styles */
+  .bg1 {
+
+    width: 19rem;
+    height: 30rem;
+
   }
-  to {
-    transform: rotate(360deg);
+
+  .location_date .location {
+    font-size: 11px;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.2);
   }
+
+  .location_date .date {
+    font-size: 7px;
+
+  }
+
+  .feels small {
+
+    font-size: 9px;
+  }
+
+  .weather-box .temperature {
+    font-size: 70px;
+    padding: 5px;
+    margin: 2rem 0rem 1rem 0rem;
+
+
+    /* margin: 2rem 0rem 1rem 6rem; */
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */
 }
